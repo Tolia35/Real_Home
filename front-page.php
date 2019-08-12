@@ -18,6 +18,7 @@ get_header();
 
 <main class="py-6>"
 
+
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article class="container">
@@ -28,7 +29,7 @@ get_header();
 			<?php if (has_post_thumbnail()) : ?>
 				<div class="row flex-md-row-reverse">
 					<div class="col-md-6 col-lg-4">
-						<?php the_post_thumbnail('thumb-510', array('class'=>'img-fluid')); ?>
+						<?php the_post_thumbnail('thumb-730', array('class'=>'img-fluid')); ?>
 					</div>
 					<div class="col-md-6 col-lg-8">
 						<?php the_content() ?>
@@ -51,17 +52,14 @@ get_header();
                 <p><?php the_excerpt() ?></p>
             </article>
 
-
 		<?php endforeach; ?>
 		<?php wp_reset_postdata(); ?>
-
-
 
 	<?php endwhile; ?>
 	<?php else : ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>
+	
 </main>
-<?php get_sidebar('lastposts') ?>
 <?php get_footer() ?>
 

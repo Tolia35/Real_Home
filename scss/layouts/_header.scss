@@ -1,0 +1,35 @@
+.navbar-brand {
+    width: 175px;
+  }
+#menu-social-menu{
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline;
+    }
+    a::before {
+      font-family: 'ForkAwesome';
+      font-size: 1.5rem;
+      position: relative;
+      bottom: -2px;
+      left: 12px;
+    }
+    .menu-item{
+      margin: 5px;
+      font-size: 0;
+      a::before{
+        content: '\f082';
+        font-size: 2rem;
+        color: #3C3C3C;
+      }
+      &.menu-item-26 a::before{
+        content: '\f16d';
+        color: #3C3C3C;
+      }
+      &.menu-item-27 a::before{
+        content: '\f081';
+        color: #3C3C3C;
+      }
+    }
+  }

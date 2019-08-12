@@ -22,8 +22,8 @@
 	</header>
 	<?php endif; ?>
 
-	<div class="infos-sejour">
-		<?php the_field('details_pratiques') ?>
+	<div class="propriete">
+		<?php the_field('propriete') ?>
 	</div>
 
 	<div class="entry-content">

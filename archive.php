@@ -21,9 +21,8 @@ get_header();
 
       <article class="col-md-6 col-lg-4">
         <a href="<?php the_permalink() ?>"><h2 class="entry-title"><?php the_title() ?></h2>
-        <?php the_post_thumbnail('thumb-510', array('class'=>'img-fluid')); ?>
+        <?php the_post_thumbnail('thumb-730', array('class'=>'img-fluid')); ?>
         </a>
-        <p><?php the_excerpt() ?></p>
       </article>
 
     <?php endwhile; ?>
