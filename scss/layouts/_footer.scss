@@ -2,11 +2,11 @@
     width: 175px;
   }
 #menu-social-menu-1{
+  display: flex;
     ul{
         list-style: none;
         padding: 0;
         margin: 0;
-        display: inline-block;
       }
     a::before {
       font-family: 'ForkAwesome';
@@ -19,7 +19,7 @@
       margin: 5px;
       font-size: 0;
       a::before{
-        content: '\f082';
+        content: '\f09a';
         font-size: 2rem;
         color: #F6F6F6;
       }
@@ -32,4 +32,11 @@
         color: #F6F6F6;
       }
     }
+  }
+
+  #menu-primary-menu-1{
+    list-style: none;
+      a{
+        color :#F6F6F6; 
+      } 
   }
