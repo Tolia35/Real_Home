@@ -34,9 +34,17 @@
     }
   }
 
-  #menu-primary-menu-1{
+#menu-primary-menu-1{
     list-style: none;
       a{
         color :#F6F6F6; 
       } 
-  }
+}
+
+#nav_menu-3 {
+    background: url(../images/Logo2.svg);
+    width: 175px;
+    height: 45px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+}

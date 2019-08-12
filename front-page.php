@@ -7,7 +7,7 @@
  */
 $lastproperty = get_posts( array(
 	'numberposts' => 6,
-  'post_type' => 'propritété',
+  'post_type' => 'propriete',
   'orderby' => 'rand'
 ) );
 

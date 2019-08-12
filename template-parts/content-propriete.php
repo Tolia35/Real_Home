@@ -15,8 +15,6 @@ $champ_surface = get_field_object('surface');
 $champ_infos = get_field_object('infos');
 $champ_description = get_field_object('description');
 
-
-get_header();
 ?>
 
 	<section id="primary" class="content-area">
@@ -38,4 +36,3 @@ get_header();
 	</section><!-- #primary -->
 
 <?php
-get_footer();
