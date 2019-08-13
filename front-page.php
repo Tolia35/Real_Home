@@ -31,19 +31,19 @@ get_header();
 </main>
 
 
-<section class="container">
+<section class="py-5 front-proprietes container">
   <?php if ( $lastproperty ) : ?>
-    <div class="front-proprietes_grid">
+    <div class="row front-proprietes_grid">
       <?php foreach ( $lastproperty as $post ) :
           setup_postdata( $post );	
 
-          get_template_part( 'template-parts/content', 'propriete' ); /* renvoi vers templatepart > contentpriopriete */
+          get_template_part( 'template-parts/content', 'propriete' );
 
       endforeach; 
       wp_reset_postdata(); ?>
     </div>
   <?php endif;?>
-  <div class="text-center"> 
+  <div class="text-center">
     <a href="<?= esc_url( home_url( '/' ) ) ?>/propriete/" class="btn btn-outline-primary my-5"><?php _e('Toutes les propriétés', 'scratch'); ?></a>
   </div>
 </section>
