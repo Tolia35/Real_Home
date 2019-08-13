@@ -17,8 +17,8 @@ $champ_corps_de_texte = get_field_object('corps_de_texte');
 
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<section id="primary" class="content-area container">
+		<main id="main" class="site-main col-9">
 
 <article <?php post_class('card-propriete-article'); ?>>
     <div class="card-propriete_content p-3">
@@ -30,7 +30,7 @@ $champ_corps_de_texte = get_field_object('corps_de_texte');
 </article>
 
 		</main><!-- #main -->
-		<div>
+		<div class=" col-3 ">
 	<?php get_sidebar('lastactuality') ?>
 	</div>
 	</section><!-- #primary -->

@@ -8,7 +8,10 @@
  *
  */
 get_header();
+
 ?>
+
+
 <h5>Nos propriétés</h5>
 <section class="py-5 front-proprietes container">
     <div class="row front-proprietes_grid">	
@@ -20,4 +23,5 @@ get_header();
         </div>
   <?php endif;?>
 </section>
+<?php the_posts_pagination(); ?>
 <?php get_footer() ?>

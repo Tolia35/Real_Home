@@ -37,7 +37,7 @@ function scratch_scripts() {
 
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', 'jquery' );
-    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js');
+    //wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js');
 }
 add_action( 'wp_enqueue_scripts', 'scratch_scripts' );
 

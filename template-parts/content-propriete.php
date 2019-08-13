@@ -21,7 +21,7 @@ $champ_nombre_de_chambre = get_field_object('nombre_de_chambre');
 	<div class="card" style="width: 350px;">
 		<a class="card-spot_link" href="<?php the_permalink(); ?>">
       	<figure class="card-propriete-figure mb-0">
-        <?= get_the_post_thumbnail($post->ID, 'thumb-255', array('class' => 'img-fluid card-propriete_img')) ?>
+        <?= get_the_post_thumbnail($post->ID, 'thumb-255', array('class' => 'img-fluid card-propriete_img d-flex justify-content-center')) ?>
 	  	</figure>
     <div class="card-body justify-content-center">
 		<?php the_title('<h2 class="entry-title h4">', '</h2>'); ?>
