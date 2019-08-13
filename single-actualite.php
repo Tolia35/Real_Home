@@ -11,33 +11,29 @@
 
 
 get_header();
+
+$champ_date = get_field_object('date');
+$champ_corps_de_texte = get_field_object('corps_de_texte');
+
 ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
 
-    <article class="container">
-        <h1 class="entry-title">
-            <?php the_title(); ?>
-        </h1>
+<article <?php post_class('card-propriete-article'); ?>>
+    <div class="card-propriete_content p-3">
+	  <?php the_title( '<h2 class="entry-title h4">', '</h2>' ); ?>
+	  <?php the_post_thumbnail( 'thumb-255', array( 'class' => 'img-fluid' ) ); ?></p>
+	 <?= $champ_date['value'] ?> <?= $champ_date ?></p>
+	  <?= $champ_corps_de_texte['value'] ?>
+    </div>
+</article>
 
-        <?php if ( has_post_thumbnail() ) : ?>
-            <div class="row flex-md-row-reverse">
-                <div class="col-md-6 col-lg-4">
-                    <?php the_post_thumbnail( 'thumb-510', array( 'class' => 'img-fluid' ) ); ?>
-                </div>
-                <div class="col-md-6 col-lg-8">
-                    <?php the_content() ?>
-                </div>
-            </div>
-        <?php else : ?>
-            <?php the_content() ?>
-        <?php endif; ?>
-    </article>
+		</main><!-- #main -->
+	</section><!-- #primary -->
 
-<?php endwhile; ?>
-<?php else : ?>
-    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
+    <?php get_footer() ?>
 
-<?php get_footer() ?>
+<?php
+
 
