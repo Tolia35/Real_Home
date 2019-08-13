@@ -7,7 +7,7 @@
  */
 $lastproperty = get_posts( array(
 	'numberposts' => 6,
-  'post_type' => 'priopriete', /*le slug du CPTU propriété - a changer si demenagé */
+  'post_type' => 'propriete', /*le slug du CPTU propriété - a changer si demenagé */
   'orderby' => 'rand'
 ) );
 
@@ -37,7 +37,7 @@ get_header();
       <?php foreach ( $lastproperty as $post ) :
           setup_postdata( $post );	
 
-          get_template_part( 'template-parts/content', 'priopriete' ); /* renvoi vers templatepart > contentpriopriete */
+          get_template_part( 'template-parts/content', 'propriete' ); /* renvoi vers templatepart > contentpriopriete */
 
       endforeach; 
       wp_reset_postdata(); ?>

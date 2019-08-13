@@ -17,12 +17,11 @@
                         alt="<?php bloginfo( 'name' ); ?>"></a></div>
             <?php dynamic_sidebar('sidebar-footer') ?>
           </div>
+          REALHOME 2019 - Politique de confidentialité
         </div>
       </footer>
 
     </div><!-- #page -->
-
-<?php wp_footer(); ?>
 
 </body>
 </html>

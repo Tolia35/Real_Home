@@ -22,7 +22,9 @@ $champ_nombre_de_chambre = get_field_object('nombre_de_chambre');
 
 <article <?php post_class('card-propriete-article'); ?>>
     <div class="card-propriete_content p-3">
-	<?php the_post_thumbnail( 'thumb-255', array( 'class' => 'img-fluid' ) ); ?></p>
+	<figure class="card_figure mb-3 mb-lg-0">
+    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumb-255', array( 'class' => 'img-fluid article-lastposts-img' )) ?></a>
+    </figure></p>
 	<?php the_title( '<h2 class="entry-title h4">', '</h2>' ); ?>
 	<strong><?= $champ_ville['value'] ?></strong></p>
 	<strong><?= $champ_prix['value'] ?> <?= $champ_prix['append'] ?></strong></p>
