@@ -22,6 +22,7 @@ register_nav_menus(
 // Custom Image sizes
   add_image_size('thumb-255', 255, 170, true);
   add_image_size('thumb-555', 555, 410, true);
+  add_image_size('thumb-680', 680, 440, true);
   add_image_size('thumb-730', 730, 492, true);
 
 }

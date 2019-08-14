@@ -19,6 +19,7 @@ get_header();
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
       <?php the_content() ?>
+
   </article>
   <?php endwhile; ?>
 
@@ -29,7 +30,6 @@ get_header();
   <?php endif; ?>
 
 </main>
-
 
 <section class="py-5 front-proprietes container">
   <?php if ( $lastproperty ) : ?>

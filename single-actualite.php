@@ -22,18 +22,15 @@ $champ_corps_de_texte = get_field_object('corps_de_texte');
 
 <article <?php post_class('card-propriete-article'); ?>>
     <div class="card-propriete_content p-3">
-	  <?php the_title( '<h2 class="entry-title h4">', '</h2>' ); ?>
+	  <?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
 	  <?= $champ_date['value'] ?></p>
-	  <?php the_post_thumbnail( 'thumb-255', array( 'class' => 'img-fluid' ) ); ?></p>
+	  <?php the_post_thumbnail( 'thumb-555', array( 'class' => 'img-fluid' ) ); ?></p>
 	  <?= $champ_corps_de_texte['value'] ?>
     </div>
 </article>
 
 		</main><!-- #main -->
-		<div class=" col-3 ">
-		<?php get_sidebar('actualitycategory') ?>
 		<?php get_sidebar('lastactuality') ?>
-		</div>
 		</section><!-- #primary -->
     	<?php get_footer() ?>
 
