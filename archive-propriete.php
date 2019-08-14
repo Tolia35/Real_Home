@@ -22,8 +22,9 @@ get_header();
       <?php while (have_posts()) : the_post(); ?>
     <?php get_template_part( 'template-parts/content', 'propriete' ); ?>
     <?php endwhile; ?>
-    <div class="container">
+    <div class="container d-flex justify-content-center">
     <?php the_posts_pagination(); ?>
+    </div>
     <?php else : ?>
         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         </div>

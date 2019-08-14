@@ -60,12 +60,16 @@ function scratch_widgets_init() {
   add_action( 'widgets_init', 'scratch_widgets_init' );
   
 // Excerpt
-function scratch_excerpt_more( $more ) {
-    $more = sprintf( '...<br><a class="btn btn-outline-primary read-more" href="%1$s">%2$s</a>',
-      get_permalink( get_the_ID() ),
-      __( 'Read More', 'scratch' )
-    );
-    return $more;
-  }
-  add_filter( 'excerpt_more', 'scratch_excerpt_more' );
-  
+add_filter('excerpt_more', function () {
+  return '&hellip;';
+});
+add_filter('get_the_excerpt', function ($excerpt) {
+  $excerpt_more = '<div class="more-link"><a class="btn btn-outline-primary" href="' . get_permalink() . '" >' . __( 'Lire la suite', 'scratch' ) . '</a></div>';
+  return $excerpt . $excerpt_more;
+});
+/**
+* Excerpt length
+*/
+add_filter( 'excerpt_length', function ( $length ) {
+  return 36;
+}, 999 );
