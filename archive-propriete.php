@@ -9,8 +9,38 @@
  */
 get_header();
 
-?>
+$ville_array = get_field_object('ville')['choices'];
+$values = isset($_GET['ville']) ? (array)$_GET['ville'] : [];
 
+?>
+<div class="container py-5">
+
+<aside class="aside-filter mb-5 p-3">
+    <form action="<?= $_SERVER['REQUEST_URI'] ?>"
+          method="get"
+          class="archive-filter-form form-inline">
+        <p class="mb-lg-0 mr-3">
+            <?php _e('Filtrer par ville:', 'scratch'); ?>
+        </p>
+        <?php foreach ($ville_array as $key => $ville) : ?>
+            <div class="form-check form-check-inline">
+                <input type="checkbox"
+                       name="ville[]"
+                       value="<?= $key ?>"
+                       id="ville-<?= $key ?>"
+                    <?php if (in_array($key, $values)): ?>
+                        checked
+                    <?php endif; ?>
+                       class="propriete-filters-field form-check-input">
+                <label for="ville-<?= $key ?>"
+                       class="form-check-label"><?= $ville ?>
+                </label>
+            </div>
+
+        <?php endforeach; ?>
+        <button class="btn btn-outline-primary ml-auto" type="submit">Filtrer</button>
+    </form>
+</aside>
 
 <section class="py-5 front-proprietes container">
   <div class="text-center">

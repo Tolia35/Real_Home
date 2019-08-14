@@ -73,3 +73,28 @@ add_filter('get_the_excerpt', function ($excerpt) {
 add_filter( 'excerpt_length', function ( $length ) {
   return 36;
 }, 999 );
+
+/**
+ * Archive proprietes filter
+ */
+add_action('pre_get_posts', 'my_pre_get_posts');
+function my_pre_get_posts($query)
+{
+    // validate
+    if (is_admin()) return;
+    if (!$query->is_main_query()) return;
+    if (is_post_type_archive('propriete')) {
+        if (isset($_GET['ville'])) {
+            $query->set('meta_key', 'ville');
+            $query->set('meta_query', array(
+                array(
+                    'key' => 'ville',
+                    'value' => $_GET['ville'],
+                    'compare' => 'IN',
+                )
+            ));
+        }
+    }
+    // always return
+    return;
+}
