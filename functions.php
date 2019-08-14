@@ -21,6 +21,7 @@ register_nav_menus(
 
 // Custom Image sizes
   add_image_size('thumb-255', 255, 170, true);
+  add_image_size('thumb-555', 555, 410, true);
   add_image_size('thumb-730', 730, 492, true);
 
 }
@@ -66,3 +67,4 @@ function scratch_excerpt_more( $more ) {
     return $more;
   }
   add_filter( 'excerpt_more', 'scratch_excerpt_more' );
+  

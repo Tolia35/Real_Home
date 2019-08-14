@@ -31,10 +31,11 @@ $champ_corps_de_texte = get_field_object('corps_de_texte');
 
 		</main><!-- #main -->
 		<div class=" col-3 ">
-	<?php get_sidebar('lastactuality') ?>
-	</div>
-	</section><!-- #primary -->
-    <?php get_footer() ?>
+		<?php get_sidebar('actualitycategory') ?>
+		<?php get_sidebar('lastactuality') ?>
+		</div>
+		</section><!-- #primary -->
+    	<?php get_footer() ?>
 
 <?php
 

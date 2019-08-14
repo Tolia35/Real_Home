@@ -44,7 +44,7 @@ get_header();
     </div>
   <?php endif;?>
   <div class="text-center">
-    <a href="<?= esc_url( home_url( '/' ) ) ?>/propriete/" class="btn btn-outline-primary my-5"><?php _e('Toutes les propriétés', 'scratch'); ?></a>
+    <a href="<?= esc_url( home_url( '/' ) ) ?>/propriete/" class="btn btn-outline-danger my-5"><?php _e('Toutes les propriétés', 'scratch'); ?></a>
   </div>
 </section>
 

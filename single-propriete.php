@@ -36,14 +36,20 @@ $champ_nombre_de_piece = get_field_object('nombre_de_piece');
 
 <article <?php post_class('card-propriete-article'); ?>>
     <div class="card-propriete_content p-3">
-	  <?php the_title( '<h2 class="entry-title h4">', '</h2>' ); ?>
-	  <?php the_post_thumbnail( 'thumb-255', array( 'class' => 'img-fluid' ) ); ?></p>
-	 <strong><?= $champ_prix['value'] ?> <?= $champ_prix['append'] ?></strong></p>
-	  <?= $champ_ville['label'] ?> : <strong><?= $champ_ville['value'] ?></strong></p>
-	  <?= $champ_nombre_de_piece['label'] ?> : <strong><?= $champ_nombre_de_piece['value'] ?></strong></p>
+      <div class="container">
+    <?php the_title( '<h2 class="entry-title h4">', '</h2>' ); ?>
+    </div>
+    <div class="container">
+      <div class="row">
+	  <?php the_post_thumbnail( 'thumb-255', array( 'class' => 'img-fluid' ) ); ?>
+	 <strong><?= $champ_prix['value'] ?> <?= $champ_prix['append'] ?></strong>
+	  <?= $champ_ville['label'] ?> : <strong><?= $champ_ville['value'] ?></strong>
+	  <?= $champ_nombre_de_piece['label'] ?> : <strong><?= $champ_nombre_de_piece['value'] ?></strong>
 	  <?= $champ_surface['label'] ?> : <strong><?= $champ_surface['value'] ?> <?= $champ_surface['append'] ?></strong></p>
 	  <?= $champ_info['label'] ?> : <strong><?= $champ_info['value'] ?> <?= $champ_info['append'] ?></strong></p>
-	  <?= $champ_description['value'] ?>
+    <?= $champ_description['value'] ?>
+</div>
+    </div>
     </div>
 </article>
 
